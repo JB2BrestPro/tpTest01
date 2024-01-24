@@ -15,8 +15,8 @@ class ChromeSearch(unittest.TestCase):
 
     def teste2e_search_in_python_org(self):
         warnings.simplefilter("ignore", ResourceWarning)
-        driver = self.driver
         # appel de la page de démarrage du scénario
+        driver = self.driver
         driver.get("https://www.python.org")
         self.assertIn("Python", driver.title)
         elem = driver.find_element("name","q")
